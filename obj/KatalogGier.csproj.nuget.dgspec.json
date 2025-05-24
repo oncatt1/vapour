@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Katalog_gier.csproj": {}
+    "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\KatalogGier.csproj": {}
   },
   "projects": {
-    "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Katalog_gier.csproj": {
+    "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\KatalogGier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Katalog_gier.csproj",
-        "projectName": "Katalog_gier",
-        "projectPath": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Katalog_gier.csproj",
+        "projectUniqueName": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\KatalogGier.csproj",
+        "projectName": "KatalogGier",
+        "projectPath": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\KatalogGier.csproj",
         "packagesPath": "C:\\Users\\oncat\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\obj\\",
         "projectStyle": "PackageReference",
