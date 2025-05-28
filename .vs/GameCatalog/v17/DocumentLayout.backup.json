@@ -54,37 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AddGame.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\AddGame.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
-              "RelativeToolTip": "Views\\Game\\AddGame.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T10:02:17.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditGame.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\EditGame.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
-              "RelativeToolTip": "Views\\Game\\EditGame.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T10:00:37.027Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -157,11 +131,37 @@
               "Title": "GameController.cs",
               "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Controllers\\GameController.cs",
               "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Controllers\\GameController.cs*",
-              "RelativeToolTip": "Controllers\\GameController.cs*",
+              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Controllers\\GameController.cs",
+              "RelativeToolTip": "Controllers\\GameController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAiwBUAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-25T14:09:31.123Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EditGame.cshtml",
+              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\EditGame.cshtml",
+              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
+              "RelativeToolTip": "Views\\Game\\EditGame.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T10:00:37.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AddGame.cshtml",
+              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\AddGame.cshtml",
+              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
+              "RelativeToolTip": "Views\\Game\\AddGame.cshtml",
+              "ViewState": "AgIAABEAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-28T10:02:17.159Z",
               "EditorCaption": ""
             },
             {

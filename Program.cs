@@ -2,7 +2,7 @@ using GameCatalog.Models;
 using GameCatalog.Services;
 using GameCatalog.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-
+//TEST
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<GameDbContext>(options =>
