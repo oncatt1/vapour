@@ -1,50 +1,34 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\parzychw\\Desktop\\siwy\\",
+  "WorkspaceRootPath": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:controllers\\gamecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:services\\gameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\views\\game\\editgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\editgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\views\\game\\addgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\addgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:models\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\models\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:models\\gamedbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:models\\errorviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\parzychw\\desktop\\siwy\\services\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:services\\interfaces\\igameservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\views\\game\\addgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\addgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\views\\game\\editgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:views\\game\\editgame.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|c:\\users\\oncat\\onedrive\\pulpit\\siwy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{82CB5DD3-D211-41BF-B24D-B6BB4D5B550D}|GameCatalog.csproj|solutionrelative:wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Bookmark",
@@ -63,144 +47,93 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AddGame.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\AddGame.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\AddGame.cshtml",
-              "RelativeToolTip": "Views\\Game\\AddGame.cshtml",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwDYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T10:02:17.159Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EditGame.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\EditGame.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\EditGame.cshtml",
-              "RelativeToolTip": "Views\\Game\\EditGame.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T10:00:37.027Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Game\\Index.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Game\\Index.cshtml",
-              "RelativeToolTip": "Views\\Game\\Index.cshtml",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDoAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-28T09:54:45.672Z",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-30T20:26:52.15Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "GameService.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Services\\GameService.cs",
-              "RelativeDocumentMoniker": "Services\\GameService.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Services\\GameService.cs",
-              "RelativeToolTip": "Services\\GameService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:43:25.724Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "GameDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\GameDbContext.cs",
-              "RelativeDocumentMoniker": "Models\\GameDbContext.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\GameDbContext.cs",
-              "RelativeToolTip": "Models\\GameDbContext.cs",
-              "ViewState": "AgIAAE8AAAAAAAAAAAAQwHQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:22:48.621Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ErrorViewModel.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\ErrorViewModel.cs",
-              "RelativeDocumentMoniker": "Models\\ErrorViewModel.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\ErrorViewModel.cs",
-              "RelativeToolTip": "Models\\ErrorViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:17:52.056Z",
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-30T20:23:12.927Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:03:48.178Z",
+              "Title": "bootstrap.css",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeDocumentMoniker": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "RelativeToolTip": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAvwFgAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-05-30T20:22:34.369Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "GameController.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Controllers\\GameController.cs",
-              "RelativeDocumentMoniker": "Controllers\\GameController.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Controllers\\GameController.cs*",
-              "RelativeToolTip": "Controllers\\GameController.cs*",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBUAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:09:31.123Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvxsAAAAOAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\Index.cshtml",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\Index.cshtml",
+              "RelativeToolTip": "Views\\Game\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-25T14:37:04.857Z",
+              "WhenOpened": "2025-05-30T20:22:18.003Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\Game.cs",
-              "RelativeDocumentMoniker": "Models\\Game.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Models\\Game.cs",
-              "RelativeToolTip": "Models\\Game.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAIwCAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:04:23.855Z",
+              "Title": "EditGame.cshtml",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\EditGame.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\EditGame.cshtml",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\EditGame.cshtml",
+              "RelativeToolTip": "Views\\Game\\EditGame.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T20:22:17.44Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IGameService.cs",
-              "DocumentMoniker": "C:\\Users\\parzychw\\Desktop\\siwy\\Services\\Interfaces\\IGameService.cs",
-              "RelativeDocumentMoniker": "Services\\Interfaces\\IGameService.cs",
-              "ToolTip": "C:\\Users\\parzychw\\Desktop\\siwy\\Services\\Interfaces\\IGameService.cs",
-              "RelativeToolTip": "Services\\Interfaces\\IGameService.cs",
+              "DocumentIndex": 4,
+              "Title": "AddGame.cshtml",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\AddGame.cshtml",
+              "RelativeDocumentMoniker": "Views\\Game\\AddGame.cshtml",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Game\\AddGame.cshtml",
+              "RelativeToolTip": "Views\\Game\\AddGame.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-25T14:43:24.436Z"
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T20:22:16.684Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\oncat\\OneDrive\\Pulpit\\siwy\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-30T20:22:06.31Z",
+              "EditorCaption": ""
             }
           ]
         }
