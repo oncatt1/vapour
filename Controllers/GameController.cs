@@ -33,7 +33,7 @@ namespace GameCatalog.Controllers
         public async Task<IActionResult> EditGame(int id)
         {
             var games = await _service.GetAllGames();
-            return View(games);
+            return View();
         }
 
         public async Task<IActionResult> DeleteGame(int id)
