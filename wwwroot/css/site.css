@@ -18,5 +18,7 @@ html {
 }
 
 body {
+  background-color: GrayText;
+  color: antiquewhite;
   margin-bottom: 60px;
 }

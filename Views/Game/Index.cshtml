@@ -3,12 +3,6 @@
 @{
     ViewData["Title"] = "Vapour";
 }
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="CreateGame">Add a new game</a>
-</p>
 <table class="table">
     <thead>
         <tr>
@@ -55,8 +49,8 @@
                 @Html.DisplayFor(modelItem => item.Price)
             </td>
             <td>
-                <a asp-action="EditGame" asp-route-id="@item.Id">Edit</a>
-                <a asp-action="DeleteGame" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
+                <a asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
             </td>
         </tr>
 }
