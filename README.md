@@ -1,5 +1,9 @@
-# super duper hiper pala projekt na pm9 
-
-zeby dzialo, porsze dodac add-migration, update-database <br>
-
-[link](https://bit.ly/grafpoleca)
+# Vapour - pm9 project 
+## Vapour is a game catalog, a Steam remake.
+### In order to make this work, it is required to execute these NuGet commands:<br>
+ ```NuGet
+	Add-Migration Initial
+	Update-Database
+```
+---
+If any problems arise use [this](https://bit.ly/grafpoleca)
