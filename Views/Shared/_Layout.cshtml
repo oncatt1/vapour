@@ -6,19 +6,23 @@
     <title>@ViewData["Title"]</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="shortcut icon" href="~/troll.ico" type="image/x-icon" />
+
+
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light text-white text-uppercase box-shadow mb-3">
             <div class="container-fluid">
-                <span class="navbar-brand">Vapour</span>
+                <img src="~/troll.ico" alt="skibidi" />
+                <span class="navbar-brand text-white">Vapour</span>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Game" asp-action="Index">Home</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Game" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Game" asp-action="AddGame">Add a Game</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="Game" asp-action="AddGame">Add a Game</a>
                         </li>
                     </ul>
                 </div>
