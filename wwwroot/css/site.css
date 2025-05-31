@@ -16,6 +16,18 @@ html {
     position: relative;
     min-height: 100%;
 }
+.tableIndex{
+    border-color: transparent;
+}
+tr:nth-child(even) {
+    background-color: #18283a;
+}
+
+#moreGames{
+    text-align: center;
+    font-size: large;
+    margin-top: 20px;
+}
 
 @media (min-width: 768px) {
   html {
@@ -25,20 +37,4 @@ html {
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-<<<<<<< HEAD
-hr {
-    background-color: dimgray;
-=======
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  background-color: GrayText;
-  color: antiquewhite;
-  margin-bottom: 60px;
->>>>>>> main
 }
