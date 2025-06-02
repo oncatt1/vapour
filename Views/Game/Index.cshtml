@@ -1,40 +1,73 @@
 ﻿@model IEnumerable<GameCatalog.Models.Game>
-
 @{
     ViewData["Title"] = "Vapour";
 }
-<table class="table tableIndex">
-    <tbody>
-        @foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Genre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Platform)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Opinion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Release_Date)
-            </td>
-            <td>
-                @if (item.Price == 0){
-                    <span>Free</span>
-                }else{
-                    <span>$</span>@Html.DisplayFor(modelItem => item.Price);
+
+<div class="row">
+    <!-- PANEL FILTRUJĄCY -->
+    <div class="col-md-3">
+        <form method="get" asp-action="Index">
+    <div class="form-group">
+        <label>Genre</label>
+        <select name="genre" class="form-control" asp-items="ViewBag.Genres">
+            <option value="">All</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label>Platform</label>
+        <select name="platform" class="form-control" asp-items="ViewBag.Platforms">
+            <option value="">All</option>
+        </select>
+    </div>
+    <div class="mt-3">
+        <button type="submit" class="btn btn-primary">Filter</button>
+        <a asp-action="Index" class="btn btn-danger ms-2">Reset</a>
+    </div>
+</form>
+    </div>
+
+    <!-- TABELA GIER -->
+    <div class="col-md-9">
+        <table class="table tableIndex">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Genre</th>
+                    <th>Platform</th>
+                    <th>Opinion</th>
+                    <th>Release Date</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model) {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Platform)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Opinion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Release_Date)</td>
+                        <td>
+                            @if (item.Price == 0) {
+                                <span>Free</span>
+                            } else {
+                                <span>$</span>@Html.DisplayFor(modelItem => item.Price)
+                            }
+                        </td>
+                        <td>
+                            <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
+                            <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
+                        </td>
+                    </tr>
                 }
-            </td>
-            <td>
-                <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
-                <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
-            </td>
-        </tr>
-        }
-    </tbody>
-</table>
-<p id="moreGames"><a href="https://p.turbosquid.com/ts-thumb/9B/qh1DP5/7j/trollfacewhite3dmodel001/jpg/1640628187/600x600/fit_q87/3e47aef92f51715ae24b22a9548800e03ae096d1/trollfacewhite3dmodel001.jpg">More games coming soon! &trade;</a></p>
+            </tbody>
+        </table>
+
+        <p id="moreGames">
+            <a href="https://p.turbosquid.com/ts-thumb/9B/qh1DP5/7j/trollfacewhite3dmodel001/jpg/1640628187/600x600/fit_q87/3e47aef92f51715ae24b22a9548800e03ae096d1/trollfacewhite3dmodel001.jpg">
+                More games coming soon! &trade;
+            </a>
+        </p>
+    </div>
+</div>
