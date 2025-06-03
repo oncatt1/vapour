@@ -40,5 +40,16 @@ namespace GameCatalog.Services
                 await _db.SaveChangesAsync();
             }
         }
+
+        public async Task<Game> GetGameById(int id)
+        {
+            return await _db.Game.FindAsync(id);
+        }
+
+        public async Task UpdateGame(Game game)
+        {
+            _db.Game.Update(game);
+            await _db.SaveChangesAsync();
+        }
     }
 }

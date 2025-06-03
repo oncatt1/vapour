@@ -27,13 +27,24 @@ namespace GameCatalog.Controllers
         public async Task<IActionResult> AddGame(Game game)
         {
             await _service.AddGame(game);
-           
-            return View();
+
+            return RedirectToAction("Index");
         }
         public async Task<IActionResult> EditGame(int id)
         {
-            var games = await _service.GetAllGames();
-            return View();
+
+            var game = await _service.GetGameById(id);
+            if (game == null)
+                return NotFound();
+
+            return View(game);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> EditGame(Game game)
+        {
+            await _service.UpdateGame(game);
+            return RedirectToAction("Index");
         }
 
         public async Task<IActionResult> DeleteGame(int id)

@@ -30,8 +30,10 @@
                 }
             </td>
             <td>
-                <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
-                <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
+                    <div class="d-flex gap-2">
+                        <a class="btn btn-primary btn-sm flex-fill text-center" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
+                        <a class="btn btn-danger btn-sm flex-fill text-center" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
+                    </div>
             </td>
         </tr>
         }
