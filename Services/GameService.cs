@@ -1,6 +1,7 @@
 ﻿using GameCatalog.Models;
 using GameCatalog.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using static Azure.Core.HttpHeader;
 
 namespace GameCatalog.Services
 {
@@ -39,6 +40,28 @@ namespace GameCatalog.Services
                 _db.Game.Remove(game);
                 await _db.SaveChangesAsync();
             }
+        }
+
+        public async Task<Game> GetGameById(int id)
+        {
+            return await _db.Game.FindAsync(id);
+        }
+
+        public async Task UpdateGame(Game game)
+        {
+            _db.Game.Update(game);
+            await _db.SaveChangesAsync();
+        public async Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform)
+        {
+            var query = _db.Game.AsQueryable();
+
+            if (!string.IsNullOrEmpty(genre))
+                query = query.Where(g => g.Genre == genre);
+
+            if (!string.IsNullOrEmpty(platform))
+                query = query.Where(g => g.Platform == platform);
+
+            return await query.ToListAsync();
         }
     }
 }
