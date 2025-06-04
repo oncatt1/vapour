@@ -51,6 +51,7 @@ namespace GameCatalog.Services
         {
             _db.Game.Update(game);
             await _db.SaveChangesAsync();
+        }
         public async Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform)
         {
             var query = _db.Game.AsQueryable();

@@ -3,47 +3,45 @@
 @{
     ViewData["Title"] = "Vapour";
 }
-<hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="AddGame">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Name" class="control-label"></label>
-                <input asp-for="Name" class="form-control" />
+            <div class="form-group m-3">
+                <label class="control-label fs-5">Name</label>
+                <input asp-for="Name" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Genre" class="control-label"></label>
-                <input asp-for="Genre" class="form-control" />
+            <div class="form-group m-3">
+                <label asp-for="Genre" class="control-label fs-5"></label>
+                <input asp-for="Genre" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Platform" class="control-label"></label>
-                <input asp-for="Platform" class="form-control" />
+            <div class="form-group m-3">
+                <label asp-for="Platform" class="control-label fs-5"></label>
+                <input asp-for="Platform" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Platform" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Opinion" class="control-label"></label>
-                <input asp-for="Opinion" class="form-control" />
+            <div class="form-group m-3">
+                <label asp-for="Opinion" class="control-label fs-5"></label>
+                <input asp-for="Opinion" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Opinion" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Release_Date" class="control-label"></label>
-                <input asp-for="Release_Date" class="form-control" />
+            <div class="form-group m-3">
+                <label class="control-label fs-5">Release Date</label>
+                <input asp-for="Release_Date" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Release_Date" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Price" class="control-label"></label>
-                <input asp-for="Price" class="form-control" />
+            <div class="form-group m-3">
+                <label asp-for="Price" class="control-label fs-5"></label>
+                <input asp-for="Price" class="inputAdd form-control border-0" />
                 <span asp-validation-for="Price" class="text-danger"></span>
             </div>
             <div class="d-flex flex-row align-items-start gap-2 mt-3">
-                <input type="submit" value="Add" class="btn btn-success btn-sm" style="width: 100px;" />
-                <input type="reset" value="Reset" class="btn btn-danger btn-sm" style="width: 100px;" />
+                <input type="submit" value="Add" class="btn buttonOk btn-m m-2 " style="width: 100px;" />
+                <input type="reset" value="Reset" class="btn buttonNo btn-m m-2" style="width: 100px;" />
             </div>  
         </form>
-        <a asp-action="Index" asp-controller="Game" class="mt-5">Back to the List</a>
     </div>
 </div>
 
