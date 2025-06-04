@@ -19,6 +19,15 @@
             <option value="">All</option>
         </select>
     </div>
+    <div class="form-group">
+        <label>Price Min</label>
+        <input type="number" step="0.01" name="minPrice" class="form-control" value="@ViewBag.MinPrice" />
+                
+    </div>
+    <div class="form-group">
+         <label>Price Max</label>
+         <input type="number" step="0.01" name="maxPrice" class="form-control" value="@ViewBag.MaxPrice" />
+    </div>
     <div class="mt-3">
         <button type="submit" class="btn btn-primary">Filter</button>
         <a asp-action="Index" class="btn btn-danger ms-2">Reset</a>
@@ -62,15 +71,6 @@
                     </tr>
                 }
 
-            </td>
-            <td>
-                    <div class="d-flex gap-2">
-                        <a class="btn btn-primary btn-sm flex-fill text-center" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
-                        <a class="btn btn-danger btn-sm flex-fill text-center" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
-                    </div>
-            </td>
-        </tr>
-        }
             </tbody>
         </table>
 

@@ -10,6 +10,6 @@ namespace GameCatalog.Services.Interfaces
         Task<List<Game>> GetAllGames();
         Task<Game> GetGameById(int id);
         Task UpdateGame(Game game);
-        Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform);
+        Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice);
     }
 }

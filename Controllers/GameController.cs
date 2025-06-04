@@ -15,11 +15,7 @@ namespace GameCatalog.Controllers
             _service = service;
         }
 
-        //public async Task<IActionResult> Index()
-        //{
-        //    var games = await _service.GetAllGames();
-        //    return View(games);
-        //}
+     
 
         public IActionResult AddGame()
         {
@@ -54,26 +50,28 @@ namespace GameCatalog.Controllers
             await _service.DeleteGame(id);
             return RedirectToAction("Index");
         }
-        public async Task<IActionResult> Index(string genre, string platform, string priceRange)
+        public async Task<IActionResult> Index(string genre, string platform, float? minPrice, float? maxPrice)
         {
-            var genres = new List<string> {
-                "Action", "Action RPG", "Action-Adventure", "Arcade", "Battle Royale", "FPS", "Fighting",
-                "MMORPG", "MOBA", "Metroidvania", "Party", "Platformer", "Puzzle", "RPG", "Racing", "Rhythm",
-                "Roguelike", "RTS", "Sandbox", "Shooter", "Simulation", "Sports", "Stealth", "Strategy",
-                "Survival horror", "Tactical RPG", "Third-Person Shooter", "Tower Defense"
-        };
+         
+            var games = await _service.GetAllGames();
 
-            var platforms = new List<string> {
-                "Arcade", "Game Boy Color", "GameBoy", "GameCube", "NES", "N64", "PC", "PS2", "PS3", "PS4",
-                "PlayStation", "SNES", "Switch", "Wii", "Xbox", "Xbox 360"
-        };
-            
+            var genres = games.Select(g => g.Genre)  
+                  .Distinct()
+                  .ToList();
+
+            var platforms = games.Select(g => g.Platform)
+                  .Distinct()
+                  .ToList();
 
             ViewBag.Genres = new SelectList(genres, genre);
             ViewBag.Platforms = new SelectList(platforms, platform);
 
-            var games = await _service.GetFilteredGamesAsync(genre, platform);
-            return View(games);
+
+            ViewBag.MinPrice = minPrice?.ToString() ?? "";
+            ViewBag.MaxPrice = maxPrice?.ToString() ?? "";
+
+            var gameslist = await _service.GetFilteredGamesAsync(genre, platform, minPrice, maxPrice);
+            return View(gameslist);
         }
 
     }
