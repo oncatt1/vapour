@@ -1,6 +1,8 @@
 ﻿using GameCatalog.Models;
+using GameCatalog.Services;
 using GameCatalog.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace GameCatalog.Controllers
 {
@@ -13,11 +15,11 @@ namespace GameCatalog.Controllers
             _service = service;
         }
 
-        public async Task<IActionResult> Index()
-        {
-            var games = await _service.GetAllGames();
-            return View(games);
-        }
+        //public async Task<IActionResult> Index()
+        //{
+        //    var games = await _service.GetAllGames();
+        //    return View(games);
+        //}
 
         public IActionResult AddGame()
         {
@@ -52,5 +54,27 @@ namespace GameCatalog.Controllers
             await _service.DeleteGame(id);
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> Index(string genre, string platform, string priceRange)
+        {
+            var genres = new List<string> {
+                "Action", "Action RPG", "Action-Adventure", "Arcade", "Battle Royale", "FPS", "Fighting",
+                "MMORPG", "MOBA", "Metroidvania", "Party", "Platformer", "Puzzle", "RPG", "Racing", "Rhythm",
+                "Roguelike", "RTS", "Sandbox", "Shooter", "Simulation", "Sports", "Stealth", "Strategy",
+                "Survival horror", "Tactical RPG", "Third-Person Shooter", "Tower Defense"
+        };
+
+            var platforms = new List<string> {
+                "Arcade", "Game Boy Color", "GameBoy", "GameCube", "NES", "N64", "PC", "PS2", "PS3", "PS4",
+                "PlayStation", "SNES", "Switch", "Wii", "Xbox", "Xbox 360"
+        };
+            
+
+            ViewBag.Genres = new SelectList(genres, genre);
+            ViewBag.Platforms = new SelectList(platforms, platform);
+
+            var games = await _service.GetFilteredGamesAsync(genre, platform);
+            return View(games);
+        }
+
     }
 }
