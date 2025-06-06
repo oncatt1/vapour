@@ -1,4 +1,4 @@
-﻿using GameCatalog.Models;
+using GameCatalog.Models;
 using GameCatalog.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using static Azure.Core.HttpHeader;
@@ -52,7 +52,8 @@ namespace GameCatalog.Services
             _db.Game.Update(game);
             await _db.SaveChangesAsync();
         }
-        public async Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform)
+        
+        public async Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice)
         {
             var query = _db.Game.AsQueryable();
 
@@ -61,6 +62,13 @@ namespace GameCatalog.Services
 
             if (!string.IsNullOrEmpty(platform))
                 query = query.Where(g => g.Platform == platform);
+
+            if (minPrice.HasValue)
+                if (minPrice.HasValue)
+                    query = query.Where(g => g.Price >= minPrice.Value);
+
+            if (maxPrice.HasValue)
+                query = query.Where(g => g.Price <= maxPrice.Value);
 
             return await query.ToListAsync();
         }
