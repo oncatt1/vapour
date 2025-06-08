@@ -5,36 +5,25 @@
 
 <div class="row">
     <div class="col-md-9">
-        <div class="d-flex align-items-center bg-dark m-2">
-            <form method="get" asp-controller="Game" asp-action="SearchByName">
-                <div class="m-2 d-flex align-items-center">
-                    <input name="searchTerm" placeholder="Enter search term" class="inputAdd p-1 border-0" value="@ViewBag.SearchTerm" />
-                    <button type="submit" class="btn buttonSearch btn-sm m-2">Search</button>
-                </div>
-            </form>
-            <div class="ms-auto m-3 d-flex align-items-center">
-                <span class="me-2 fs-6"> Sort by:</span>
-                <select name="platform" class="form-select selectAdd">
-                    <option value="">Relevance</option>
-                    <option value="">Release date</option>
-                    <option value="">Name</option>
-                    <option value="">Lowest price</option>
-                    <option value="">Highest price</option>
-                </select>
-            </div>
-        </div>
         <table class="table tableIndex">
-            <thead>
-                <tr>
-                    <th>Name</th>
-                    <th>Genre</th>
-                    <th>Platform</th>
-                    <th>Opinion</th>
-                    <th>Release Date</th>
-                    <th>Price</th>
-                    <th>Actions</th>
-                </tr>
-            </thead>
+            <div class="d-flex align-items-center bg-dark m-2">
+                <form method="get" asp-controller="Game" asp-action="SearchByName">
+                    <div class="m-2 d-flex align-items-center">
+                        <input name="searchTerm" placeholder="Enter search term" class="inputAdd p-1 border-0" value="@ViewBag.SearchTerm" />
+                        <button type="submit" class="btn buttonSearch btn-sm m-2">Search</button>
+                    </div>
+                </form>
+                <div class="ms-auto m-3 d-flex align-items-center">
+                    <span class="me-2 fs-6"> Sort by:</span>
+                    <select name="platform" class="form-select selectAdd">
+                        <option value="">Relevance</option>
+                        <option value="">Release date</option>
+                        <option value="">Name</option>
+                        <option value="">Lowest price</option>
+                        <option value="">Highest price</option>
+                    </select>
+                </div>
+            </div>
             <tbody>
                 @foreach (var item in Model)
                 {
@@ -82,7 +71,7 @@
                 <div class="filtr-text p-1">Platform</div>
                 <select name="platform" class="inputAdd form-control border-0 m-2 w-95" asp-items="ViewBag.Platforms">
                     <option value="">All</option>
-                </select>
+                </select>\
             </div>
             <div class="form-group filtr">
                 <div class="filtr-text p-1">Price</div>
