@@ -4,6 +4,72 @@
 }
 
 <div class="row">
+    <div class="col-md-9">
+        <div class="d-flex align-items-center bg-dark m-2">
+            <form method="get" asp-controller="Game" asp-action="SearchByName">
+                <div class="m-2 d-flex align-items-center">
+                    <input name="searchTerm" placeholder="Enter search term" class="inputAdd p-1 border-0" value="@ViewBag.SearchTerm" />
+                    <button type="submit" class="btn buttonSearch btn-sm m-2">Search</button>
+                </div>
+            </form>
+            <div class="ms-auto m-3 d-flex align-items-center">
+                <span class="me-2 fs-6"> Sort by:</span>
+                <select name="platform" class="form-select selectAdd">
+                    <option value="">Relevance</option>
+                    <option value="">Release date</option>
+                    <option value="">Name</option>
+                    <option value="">Lowest price</option>
+                    <option value="">Highest price</option>
+                </select>
+            </div>
+        </div>
+        <table class="table tableIndex">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Genre</th>
+                    <th>Platform</th>
+                    <th>Opinion</th>
+                    <th>Release Date</th>
+                    <th>Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Platform)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Opinion)</td>
+                        <td>@Html.DisplayFor(modelItem => item.Release_Date)</td>
+                        <td>
+                            @if (item.Price == 0)
+                            {
+                                <span>Free</span>
+                            }
+                            else
+                            {
+                                <span>$</span>
+
+                                @Html.DisplayFor(modelItem => item.Price)
+                            }
+                        </td>
+                        <td>
+                            <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
+                            <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
+                        </td>
+                    </tr>
+                }
+        </table>
+
+        <p id="moreGames">
+            <a href="https://p.turbosquid.com/ts-thumb/9B/qh1DP5/7j/trollfacewhite3dmodel001/jpg/1640628187/600x600/fit_q87/3e47aef92f51715ae24b22a9548800e03ae096d1/trollfacewhite3dmodel001.jpg">
+                More games coming soon! &trade;
+            </a>
+        </p>
+    </div>
     <div class="col-md-3 ">
         <form method="get" asp-action="Index">
             <div class="form-group filtr">
@@ -18,70 +84,15 @@
                     <option value="">All</option>
                 </select>
             </div>
-            <div class="form-group">
-                <label>Price Min</label>
-                <input type="number" step="0.01" name="minPrice" class="form-control" value="@ViewBag.MinPrice" />
-            </div>
-            <div class="form-group">
-                <label>Price Max</label>
-                <input type="number" step="0.01" name="maxPrice" class="form-control" value="@ViewBag.MaxPrice" />
+            <div class="form-group filtr">
+                <div class="filtr-text p-1">Price</div>
+                <input type="number" step="0.01" name="minPrice" placeholder="min" class="inputAdd form-control border-0 m-2 w-95" value="@ViewBag.MinPrice" />
+                <input type="number" step="0.01" name="maxPrice" placeholder="max" class="inputAdd form-control border-0 m-2 w-95" value="@ViewBag.MaxPrice" />
             </div>
             <div class="mt-3">
                 <button type="submit" class="btn buttonOk btn-m m-2 ">Filter</button>
                 <a asp-action="Index" class="btn buttonNo btn-m m-2">Reset</a>
             </div>
         </form>
-    </div>
-
-    <div class="col-md-9">
-        <table class="table tableIndex">
-            <div class="d-flex align-items-center bg-dark m-2">
-                <form method="get" asp-controller="Game" asp-action="SearchByName">
-                    <div class="m-2 d-flex align-items-center">
-                        <input name="searchTerm" placeholder="Enter search term" class="inputAdd p-1 border-0" value="@ViewBag.SearchTerm" />
-                        <button type="submit" class="btn buttonSearch btn-sm m-2">Search</button>
-                    </div>
-                </form>
-                <div class="ms-auto m-3 d-flex align-items-center">
-                    <span class="me-2 fs-6"> Sort by:</span>
-                    <select name="platform" class="form-select selectAdd">
-                        <option value="">Relevance</option>
-                        <option value="">Release date</option>
-                        <option value="">Name</option>
-                        <option value="">Lowest price</option>
-                        <option value="">Highest price</option>
-                    </select>
-                </div>
-                <br />
-            </div>
-            <tbody>
-                @foreach (var item in Model) {
-                    <tr>
-                        <td>@Html.DisplayFor(modelItem => item.Name)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Genre)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Platform)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Opinion)</td>
-                        <td>@Html.DisplayFor(modelItem => item.Release_Date)</td>
-                        <td>
-                            @if (item.Price == 0) {
-                                <span>Free</span>
-                            } else {
-                                <span>$</span>@Html.DisplayFor(modelItem => item.Price)
-                            }
-                        </td>
-                        <td>
-                            <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit game</a>
-                            <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete game</a>
-                        </td>
-                    </tr>
-                }
-            </tbody>
-        </table>
-
-        <p id="moreGames">
-            <a href="https://p.turbosquid.com/ts-thumb/9B/qh1DP5/7j/trollfacewhite3dmodel001/jpg/1640628187/600x600/fit_q87/3e47aef92f51715ae24b22a9548800e03ae096d1/trollfacewhite3dmodel001.jpg">
-                More games coming soon! &trade;
-            </a>
-        </p>
     </div>
 </div>
