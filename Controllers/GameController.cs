@@ -66,7 +66,21 @@ namespace GameCatalog.Controllers
             await _service.UpdateGame(game);
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> SearchByName(string searchTerm)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm))
+            {
+                
+                return RedirectToAction("Index");
+            }
 
+            
+            var filteredGames = await _service.SearchGamesByNameAsync(searchTerm);
+
+            ViewBag.SearchTerm = searchTerm; 
+
+            return View("Index", filteredGames); 
+        }
         public async Task<IActionResult> DeleteGame(int id)
         {
             await _service.DeleteGame(id);
