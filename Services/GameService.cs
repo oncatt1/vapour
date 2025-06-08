@@ -19,6 +19,13 @@ namespace GameCatalog.Services
             return await _db.Game.ToListAsync();
         }
 
+        public async Task<List<Game>> SearchGamesByNameAsync(string searchTerm)
+        {
+            return await _db.Game
+                .Where(g => g.Name.Contains(searchTerm))
+                .ToListAsync();
+        }
+
 
         public async Task AddGame(Game game)
         {
@@ -53,7 +60,7 @@ namespace GameCatalog.Services
             await _db.SaveChangesAsync();
         }
         
-        public async Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice)
+        public async Task<List<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice)
         {
             var query = _db.Game.AsQueryable();
 
