@@ -68,17 +68,9 @@ namespace GameCatalog.Controllers
         }
         public async Task<IActionResult> SearchByName(string searchTerm)
         {
-            if (string.IsNullOrWhiteSpace(searchTerm))
-            {
-                
-                return RedirectToAction("Index");
-            }
-
-            
+            if (string.IsNullOrWhiteSpace(searchTerm)) { return RedirectToAction("Index"); }
             var filteredGames = await _service.SearchGamesByNameAsync(searchTerm);
-
             ViewBag.SearchTerm = searchTerm; 
-
             return View("Index", filteredGames); 
         }
         public async Task<IActionResult> DeleteGame(int id)
