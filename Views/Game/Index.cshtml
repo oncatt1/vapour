@@ -35,17 +35,6 @@
 
     <div class="col-md-9">
         <table class="table tableIndex">
-<<<<<<< Updated upstream
-            <div class="d-flex align-items-center gap-2 flex-wrap bg-dark">
-                <div class="m-2">
-                    <input placeholder="enter search term" class="inputAdd  border-0" />
-                    <button type="submit" class="btn buttonOk btn-m m-2 ">Search</button>
-                </div>
-                <div>
-                    Sort by: 
-                    <select name="platform" class="inputAdd border-0" asp-items="ViewBag.Platforms">
-                        <option value="">All</option>
-=======
             <div class="d-flex align-items-center bg-dark m-2">
                 <form method="get" asp-controller="Game" asp-action="SearchByName">
                     <div class="m-2 d-flex align-items-center">
@@ -61,7 +50,6 @@
                         <option value="">Name</option>
                         <option value="">Lowest price</option>
                         <option value="">Highest price</option>
->>>>>>> Stashed changes
                     </select>
                 </div>
                 <br />
