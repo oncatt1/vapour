@@ -96,5 +96,31 @@ namespace GameCatalog.Services
 
             return await query.ToListAsync();
         }
+        public async Task<List<Game>> SortGamesAsync(string sortBy, bool ascending = true)
+        {
+            IQueryable<Game> query = _db.Game.AsQueryable();
+
+            switch (sortBy?.ToLower())
+            {
+                case "name":
+                    query = query.OrderBy(g => g.Name);
+                    break;
+                case "releasedate":
+                    query = query.OrderBy(g => g.Release_Date);
+                    break;
+                case "lowestprice":
+                    query = ascending ? query.OrderBy(g => g.Price) : query.OrderByDescending(g => g.Price);
+                    break;
+                case "highestprice":
+                    query = ascending ? query.OrderByDescending(g => g.Price) : query.OrderBy(g => g.Price);
+                    break;
+                default:
+                    query = query.OrderBy(g => g.Name);
+                    break;
+            }
+
+            return await query.ToListAsync();
+        }
+
     }
 }

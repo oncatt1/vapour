@@ -90,6 +90,11 @@ namespace GameCatalog.Controllers
             await _service.DeleteGame(id);
             return RedirectToAction("Index");
         }
+        public async Task<IActionResult> SortGamesAsync(string sortBy, bool ascending = true)
+        {
+            var games = await _service.SortGamesAsync(sortBy, ascending);
+            return Ok(games);
+        }
 
     }
 }
