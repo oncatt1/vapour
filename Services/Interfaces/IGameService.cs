@@ -8,6 +8,9 @@ namespace GameCatalog.Services.Interfaces
         Task DeleteGame(int id);
         Task EditGame(Game gra);
         Task<List<Game>> GetAllGames();
-        Task<IEnumerable<Game>> GetFilteredGamesAsync(string genre, string platform);
+        Task<Game> GetGameById(int id);
+        Task UpdateGame(Game game);
+        Task<List<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice);
+        Task<List<Game>> SearchGamesByNameAsync(string searchTerm);
     }
 }

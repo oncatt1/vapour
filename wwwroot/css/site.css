@@ -28,13 +28,58 @@ tr:nth-child(even) {
     font-size: large;
     margin-top: 20px;
 }
+.inputAdd, option {
+    background-color: #223A4C;
+    color: whitesmoke;
+}
+.selectAdd {
+    background-color: #223A4C;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    width: auto;
+    display: inline-block;
+}
+.inputAdd:focus, .form-control:focus {
+    background-color: #223A4C;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+}
 
+.buttonOk {
+    background-color: #286BD5;
+    color:whitesmoke;
+    width: 42%;
+}
+.buttonNo {
+    background-color: #32363F;
+    color: whitesmoke;
+    width: 42%;
+    float: right;
+}
+.buttonSearch {
+    background-color: #213A4C;
+    color: #64C1EA;
+    width: 42%;
+    
+}
+.filtr {
+    border: 2px #323E4C solid;
+    margin: 10px;
+}
+.w-95{
+    width: 95%;
+}
+.filtr-text {
+    background-color: #323E4C;
+}
+.float-right{
+    float: right;
+}
 @media (min-width: 768px) {
   html {
     font-size: 16px;
   }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}

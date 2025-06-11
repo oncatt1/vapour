@@ -1,4 +1,4 @@
-﻿using GameCatalog.Models;
+using GameCatalog.Models;
 using GameCatalog.Services;
 using GameCatalog.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
@@ -15,12 +15,30 @@ namespace GameCatalog.Controllers
             _service = service;
         }
 
-        //public async Task<IActionResult> Index()
-        //{
-        //    var games = await _service.GetAllGames();
-        //    return View(games);
-        //}
+        public async Task<IActionResult> Index(string genre, string platform, float? minPrice, float? maxPrice)
+        {
+         
+            var games = await _service.GetAllGames();
 
+            var genres = games.Select(g => g.Genre)  
+                  .Distinct()
+                  .ToList();
+
+            var platforms = games.Select(g => g.Platform)
+                  .Distinct()
+                  .ToList();
+
+            ViewBag.Genres = new SelectList(genres, genre);
+            ViewBag.Platforms = new SelectList(platforms, platform);
+
+
+            ViewBag.MinPrice = minPrice?.ToString() ?? "";
+            ViewBag.MaxPrice = maxPrice?.ToString() ?? "";
+
+            var gameslist = await _service.GetFilteredGamesAsync(genre, platform, minPrice, maxPrice);
+            return View(gameslist);
+        }
+        
         public IActionResult AddGame()
         {
             return View();
@@ -29,40 +47,36 @@ namespace GameCatalog.Controllers
         public async Task<IActionResult> AddGame(Game game)
         {
             await _service.AddGame(game);
-           
-            return View();
+
+            return RedirectToAction("Index");
         }
         public async Task<IActionResult> EditGame(int id)
         {
-            var games = await _service.GetAllGames();
-            return View();
-        }
 
+            var game = await _service.GetGameById(id);
+            if (game == null)
+                return NotFound();
+
+            return View(game);
+
+        }
+        [HttpPost]
+        public async Task<IActionResult> EditGame(Game game)
+        {
+            await _service.UpdateGame(game);
+            return RedirectToAction("Index");
+        }
+        public async Task<IActionResult> SearchByName(string searchTerm)
+        {
+            if (string.IsNullOrWhiteSpace(searchTerm)) { return RedirectToAction("Index"); }
+            var filteredGames = await _service.SearchGamesByNameAsync(searchTerm);
+            ViewBag.SearchTerm = searchTerm; 
+            return View("Index", filteredGames); 
+        }
         public async Task<IActionResult> DeleteGame(int id)
         {
             await _service.DeleteGame(id);
             return RedirectToAction("Index");
-        }
-        public async Task<IActionResult> Index(string genre, string platform, string priceRange)
-        {
-            var genres = new List<string> {
-                "Action", "Action RPG", "Action-Adventure", "Arcade", "Battle Royale", "FPS", "Fighting",
-                "MMORPG", "MOBA", "Metroidvania", "Party", "Platformer", "Puzzle", "RPG", "Racing", "Rhythm",
-                "Roguelike", "RTS", "Sandbox", "Shooter", "Simulation", "Sports", "Stealth", "Strategy",
-                "Survival horror", "Tactical RPG", "Third-Person Shooter", "Tower Defense"
-        };
-
-            var platforms = new List<string> {
-                "Arcade", "Game Boy Color", "GameBoy", "GameCube", "NES", "N64", "PC", "PS2", "PS3", "PS4",
-                "PlayStation", "SNES", "Switch", "Wii", "Xbox", "Xbox 360"
-        };
-            
-
-            ViewBag.Genres = new SelectList(genres, genre);
-            ViewBag.Platforms = new SelectList(platforms, platform);
-
-            var games = await _service.GetFilteredGamesAsync(genre, platform);
-            return View(games);
         }
 
     }
