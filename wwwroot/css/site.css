@@ -47,6 +47,17 @@ tr:nth-child(even) {
     outline: none;
 }
 
+input[type=number] {
+    -moz-appearance: textfield;
+}
+input[name=searchTerm]{
+    padding: 8px 10px 8px 12px;
+    margin: 0px 5px;
+}
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 .buttonOk {
     background-color: #286BD5;
     color:whitesmoke;
