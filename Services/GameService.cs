@@ -59,21 +59,40 @@ namespace GameCatalog.Services
             await _db.SaveChangesAsync();
         }
         
-        public async Task<List<Game>> GetFilteredGamesAsync(string genre, string platform, float? minPrice, float? maxPrice)
+        public async Task<List<Game>> GetFilteredGamesAsync(string name,string genre, string platform, float? minPrice, float? maxPrice)
         {
             var query = _db.Game.AsQueryable();
 
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(g => g.Name.Contains(name));
+            }
+                
+
             if (!string.IsNullOrEmpty(genre))
+            {
                 query = query.Where(g => g.Genre == genre);
+            }
+                
 
             if (!string.IsNullOrEmpty(platform))
+            {
                 query = query.Where(g => g.Platform == platform);
+            }
+               
 
             if (minPrice.HasValue)
+            {
                 query = query.Where(g => g.Price >= minPrice.Value);
+            }
+                
 
             if (maxPrice.HasValue)
+            {
                 query = query.Where(g => g.Price <= maxPrice.Value);
+            }
+                
+                
 
             return await query.ToListAsync();
         }
