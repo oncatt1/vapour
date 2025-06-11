@@ -12,6 +12,5 @@ namespace GameCatalog.Services.Interfaces
         Task UpdateGame(Game game);
         Task<List<Game>> GetFilteredGamesAsync(string name, string genre, string platform, float? minPrice, float? maxPrice);
         Task<List<Game>> SearchGamesByNameAsync(string searchTerm);
-        Task<List<Game>> SortGamesAsync(string sortBy, bool ascending = true);
     }
 }

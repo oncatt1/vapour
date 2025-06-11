@@ -8,10 +8,7 @@ namespace GameCatalog.Services
     {
         private readonly GameDbContext _db;
 
-        public GameService(GameDbContext db)
-        {
-            _db = db;
-        }
+        public GameService(GameDbContext db) { _db = db; }
 
         public async Task<List<Game>> GetAllGames()
         {
@@ -24,7 +21,6 @@ namespace GameCatalog.Services
                 .Where(g => g.Name.Contains(searchTerm))
                 .ToListAsync();
         }
-
 
         public async Task AddGame(Game game)
         {
@@ -63,64 +59,13 @@ namespace GameCatalog.Services
         {
             var query = _db.Game.AsQueryable();
 
-            if (!string.IsNullOrEmpty(name))
-            {
-                query = query.Where(g => g.Name.Contains(name));
-            }
-                
-
-            if (!string.IsNullOrEmpty(genre))
-            {
-                query = query.Where(g => g.Genre == genre);
-            }
-                
-
-            if (!string.IsNullOrEmpty(platform))
-            {
-                query = query.Where(g => g.Platform == platform);
-            }
-               
-
-            if (minPrice.HasValue)
-            {
-                query = query.Where(g => g.Price >= minPrice.Value);
-            }
-                
-
-            if (maxPrice.HasValue)
-            {
-                query = query.Where(g => g.Price <= maxPrice.Value);
-            }
-                
-                
+            if (!string.IsNullOrEmpty(name)) { query = query.Where(g => g.Name.Contains(name)); }
+            if (!string.IsNullOrEmpty(genre)) { query = query.Where(g => g.Genre == genre); }
+            if (!string.IsNullOrEmpty(platform)) { query = query.Where(g => g.Platform == platform); }
+            if (minPrice.HasValue) { query = query.Where(g => g.Price >= minPrice.Value); }
+            if (maxPrice.HasValue) { query = query.Where(g => g.Price <= maxPrice.Value); }
 
             return await query.ToListAsync();
         }
-        public async Task<List<Game>> SortGamesAsync(string sortBy, bool ascending = true)
-        {
-            IQueryable<Game> query = _db.Game.AsQueryable();
-
-            switch (sortBy?.ToLower())
-            {
-                case "name":
-                    query = query.OrderBy(g => g.Name);
-                    break;
-                case "releasedate":
-                    query = query.OrderBy(g => g.Release_Date);
-                    break;
-                case "lowestprice":
-                    query = ascending ? query.OrderBy(g => g.Price) : query.OrderByDescending(g => g.Price);
-                    break;
-                case "highestprice":
-                    query = ascending ? query.OrderByDescending(g => g.Price) : query.OrderBy(g => g.Price);
-                    break;
-                default:
-                    query = query.OrderBy(g => g.Name);
-                    break;
-            }
-
-            return await query.ToListAsync();
-        }
-
     }
 }

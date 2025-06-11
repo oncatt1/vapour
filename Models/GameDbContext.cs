@@ -109,8 +109,9 @@ namespace GameCatalog.Models
                 new Game { Id = 97, Name = "SimCity 2000", Genre = "Simulation", Platform = "PC", Opinion = "City-building classic", Release_Date = new DateOnly(1993, 1, 1), Price = 39.99f },
                 new Game { Id = 98, Name = "Plants vs. Zombies", Genre = "Tower Defense", Platform = "PC", Opinion = "Fun strategy game", Release_Date = new DateOnly(2009, 5, 5), Price = 19.99f },
                 new Game { Id = 99, Name = "Max Payne", Genre = "Third-Person Shooter", Platform = "PC", Opinion = "Noir action classic", Release_Date = new DateOnly(2001, 7, 23), Price = 49.99f },
-                new Game { Id = 100, Name = "Elden Ring", Genre = "Action RPG", Platform = "PC", Opinion = "Open-world masterpiece", Release_Date = new DateOnly(2022, 2, 25), Price = 59.99f }
-            );
+                new Game { Id = 100, Name = "Elden Ring", Genre = "Action RPG", Platform = "PC", Opinion = "Open-world masterpiece", Release_Date = new DateOnly(2022, 2, 25), Price = 59.99f },
+                new Game { Id = 101, Name = "NEEDY STREAMER OVERLOAD", Genre = "Simulation", Platform = "PC", Opinion = "absolute cinema of a game", Release_Date = new DateOnly(2021, 2, 18), Price = 19.99f }
+                );
         }
     }
 }
