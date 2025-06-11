@@ -1,7 +1,6 @@
 using GameCatalog.Models;
 using GameCatalog.Services.Interfaces;
 using Microsoft.EntityFrameworkCore;
-using static Azure.Core.HttpHeader;
 
 namespace GameCatalog.Services
 {
@@ -71,8 +70,7 @@ namespace GameCatalog.Services
                 query = query.Where(g => g.Platform == platform);
 
             if (minPrice.HasValue)
-                if (minPrice.HasValue)
-                    query = query.Where(g => g.Price >= minPrice.Value);
+                query = query.Where(g => g.Price >= minPrice.Value);
 
             if (maxPrice.HasValue)
                 query = query.Where(g => g.Price <= maxPrice.Value);
