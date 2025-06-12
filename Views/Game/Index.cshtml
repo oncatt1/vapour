@@ -1,0 +1,97 @@
+﻿@model IEnumerable<GameCatalog.Models.Game>
+@{
+    ViewData["Title"] = "Vapour";
+}
+
+<form method="get" asp-action="Index" asp-controller="Game">
+    <div class="row">
+        <div class="col-md-9">
+            <div class="d-flex align-items-center bg-dark m-2">
+                <div class="m-2 d-flex align-items-center">
+                    <input name="name" placeholder="Enter search term" class="inputAdd border-0" value="@ViewBag.Name" />
+                    <button type="submit" class="btn buttonSearch btn-sm m-2">Search</button>
+                </div>
+                <div class="ms-auto m-3 d-flex align-items-center">
+                    <span class="me-2 fs-6">Sort by:</span>
+                    <select name="sort" class="form-select selectAdd" onchange="this.form.submit()">
+                        <option value="" selected="@(string.IsNullOrEmpty(ViewBag.Sort) ? "selected" : null)">Relevance</option>
+                        <option value="ReleaseDate" selected="@(ViewBag.Sort == "ReleaseDate" ? "selected" : null)">Release date</option>
+                        <option value="Name" selected="@(ViewBag.Sort == "Name" ? "selected" : null)">Name</option>
+                        <option value="LowestPrice" selected="@(ViewBag.Sort == "LowestPrice" ? "selected" : null)">Lowest price</option>
+                        <option value="HighestPrice" selected="@(ViewBag.Sort == "HighestPrice" ? "selected" : null)">Highest price</option>
+                    </select>
+                </div>
+            </div>
+            <table class="table tableIndex">
+                <colgroup>
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col />
+                    <col style="width: 10%;" />
+                    <col />
+                </colgroup>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Genre)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Platform)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Opinion)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Release_Date)</td>
+                            <td>
+                                @if (item.Price == 0)
+                                {
+                                    <span>Free</span>
+                                }
+                                else
+                                {
+                                    <span>$@Html.DisplayFor(modelItem => item.Price)</span>
+                                
+                                }
+                            </td>
+                            <td class=" p-3">
+                                <a class="text-muted" asp-action="EditGame" asp-route-id="@item.Id">Edit</a><br />
+                                <a class="text-muted" asp-action="DeleteGame" asp-route-id="@item.Id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <p id="moreGames">
+                <a href="https://p.turbosquid.com/ts-thumb/9B/qh1DP5/7j/trollfacewhite3dmodel001/jpg/1640628187/600x600/fit_q87/3e47aef92f51715ae24b22a9548800e03ae096d1/trollfacewhite3dmodel001.jpg">
+                    More games coming soon! &trade;
+                </a>
+            </p>
+        </div>
+        <div class="col-md-3">
+            <div class="form-group filtr">
+                <div class="filtr-text p-1">Genre</div>
+                <select name="genre" class="inputAdd form-control border-0 m-2 w-95" asp-items="ViewBag.Genres">
+                    <option value="">All</option>
+                </select>
+            </div>
+
+            <div class="form-group filtr">
+                <div class="filtr-text p-1">Platform</div>
+                <select name="platform" class="inputAdd form-control border-0 m-2 w-95" asp-items="ViewBag.Platforms">
+                    <option value="">All</option>
+                </select>
+            </div>
+
+            <div class="form-group filtr">
+                <div class="filtr-text p-1">Price</div>
+                <input type="number" step="0.01" name="minPrice" placeholder="min" class="inputAdd form-control border-0 m-2 w-95" value="@ViewBag.MinPrice" />
+                <input type="number" step="0.01" name="maxPrice" placeholder="max" class="inputAdd form-control border-0 m-2 w-95" value="@ViewBag.MaxPrice" />
+            </div>
+
+            <div class="mt-3">
+                <button type="submit" class="btn buttonOk btn-m m-2">Filter</button>
+                <a asp-action="Index" class="btn buttonNo btn-m m-2">Reset</a>
+            </div>
+        </div>
+    </div>
+</form>
