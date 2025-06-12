@@ -6,4 +6,3 @@
 	Update-Database
 ```
 ---
-If any problems arise use [this](https://bit.ly/grafpoleca)
